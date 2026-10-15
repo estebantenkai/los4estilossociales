@@ -277,17 +277,8 @@ textarea{resize:vertical;line-height:1.6;min-height:84px}
    Zona 2 con más volumen: hero en degradé, ruta de estaciones, tarjetas con relieve. */
 :root{--sd:#d4522a;--si:#8b3a8f;--ss:#3b35a8;--sc:#2d2894}
 
-/* Hero con formas */
-.hero.hx{background:var(--grad);padding:54px 0 48px}
-.hero.hx::after{display:none}
-.hx-shapes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hx-shapes i{position:absolute;display:block;border:2px solid rgba(255,255,255,.16);border-radius:50%}
-.hx-shapes i:nth-child(1){width:320px;height:320px;right:-90px;top:-120px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 68%);border-color:rgba(255,255,255,.1)}
-.hx-shapes i:nth-child(2){width:120px;height:120px;right:130px;bottom:-50px;border-radius:30px;transform:rotate(18deg)}
-.hx-shapes i:nth-child(3){width:64px;height:64px;right:44px;bottom:60px;border-radius:50%;background:rgba(255,255,255,.1);border:none}
-.hx-shapes i:nth-child(4){width:170px;height:170px;left:-60px;bottom:-110px;border-radius:50%;border-color:rgba(255,255,255,.12)}
-.hx .hero-bold{font-size:clamp(32px,6vw,46px)}
-.hx .hero-lead{display:block;font-size:15px;line-height:1.7;color:rgba(255,255,255,.82);max-width:480px;margin-top:14px}
+/* Hero: igual al de las demás herramientas (indigo sólido, sin formas) */
+.hero .hero-lead{display:block;font-size:15px;line-height:1.7;color:rgba(255,255,255,.82);max-width:480px;margin-top:14px}
 
 /* Ruta de estaciones (6 secciones) */
 .route6{display:flex;align-items:flex-start;gap:0;margin:0 0 26px;position:relative}
@@ -564,7 +555,7 @@ function introHTML(){
   var n = answeredCount();
   var resume = (n > 0 && !state.done) ? '<div class="resume"><h3>Tenés una evaluación en curso</h3><p>Hiciste ' + n + ' de ' + TOTAL + ' actividades. Podés retomar donde la dejaste o empezar de nuevo.</p><div class="btn-row" style="margin-top:0"><button class="btn" data-action="resume">Continuar evaluación</button><button class="btn-ghost" data-action="fresh">Empezar de nuevo</button></div></div>' : '';
   return '<div>' +
-    '<div class="hero hx"><div class="hx-shapes"><i></i><i></i><i></i><i></i></div><div class="wrap"><p class="sup">Evaluación · Tenkai Consulting</p><span class="hero-thin">Los 4</span><span class="hero-bold">Estilos Sociales</span>' +
+    '<div class="hero"><div class="wrap"><p class="sup">Evaluación · Tenkai Consulting</p><span class="hero-thin">Los 4</span><span class="hero-bold">Estilos Sociales</span>' +
     '<span class="hero-lead">Descubrí cómo te relacionás, comunicás y liderás. Conocer tu estilo es la base para trabajar mejor con cualquier persona.</span></div></div>' +
     '<div class="wrap"><div class="sec">' +
     '<p class="intro-p">Inspirada en el trabajo de William Moulton Marston, esta evaluación describe <strong>cuatro estilos de comportamiento</strong> que explican cómo cada persona enfrenta el entorno, se relaciona con otras y toma decisiones. Ninguno es mejor que otro: son <strong>complementarios</strong>.</p>' +
